@@ -1,2 +1,24 @@
-# Rails-Blog-App
-The Blog app is a website where you can read and interact with posts. You can see a list of posts, leave comments, and like your favorite ones.
+# README
+
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
