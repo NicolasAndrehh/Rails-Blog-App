@@ -17,5 +17,5 @@ Comment.create(post_id: first_post.id, author_id: second_user.id, text: 'Hi Tom!
 Comment.create(post_id: first_post.id, author_id: first_user.id, text: 'Hi Lilly!' )
 
 # Create likes
-Like.create(post_id: first_post.id, user_id: first_user.id)
-Like.create(post_id: first_post.id, user_id: second_user.id)
+Like.create(post_id: first_post.id, author_id: first_user.id)
+Like.create(post_id: first_post.id, author_id: second_user.id)
