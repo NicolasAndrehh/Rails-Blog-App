@@ -26,9 +26,15 @@ RSpec.describe User, type: :model do
             expect(@user).to_not be_valid
         end
 
-        it 'it should validate numericality of posts_counter' do
+        it 'should validate numericality of posts_counter' do
             expect(@user).to be_valid
             @user.posts_counter = 'a'
+            expect(@user).to_not be_valid
+        end
+
+        it 'should validate if posts_counter is greater than or equal to zero' do
+            expect(@user).to be_valid
+            @user.posts_counter = -1
             expect(@user).to_not be_valid
         end
     end
