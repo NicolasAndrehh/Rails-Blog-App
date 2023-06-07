@@ -7,7 +7,7 @@ class Comment < ApplicationRecord
   after_save :update_comment_counter
 
   private
-  
+
   def update_comment_counter
     Post.find(post_id).update(comments_counter: Comment.where(post_id:).count)
   end
