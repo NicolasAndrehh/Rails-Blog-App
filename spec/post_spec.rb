@@ -81,6 +81,8 @@ RSpec.describe Post, type: :model do
         end
 
         it 'should update user\'s posts_counter after save a post' do
+            user_posts_counter = @user.posts_counter
+            expect(user_posts_counter).to eq(0)
             @user.reload
             user_posts_counter = @user.posts_counter
             expect(user_posts_counter).to eq(1)
