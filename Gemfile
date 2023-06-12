@@ -34,6 +34,7 @@ group :development do
 end
 
 group :test do
+  gem 'rails-controller-testing', '~> 0.0.3'
   gem 'capybara'
   gem 'rspec-rails'
   gem 'selenium-webdriver'
