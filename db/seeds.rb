@@ -1,9 +1,9 @@
 # Create users
-first_user = User.create(name: 'Tom', photo: 'user_image.jpg', bio: 'Teacher from Mexico.')
-second_user = User.create(name: 'Lilly', photo: 'user_image.jpg', bio: 'Teacher from Poland.')
-third_user = User.create(name: 'John', photo: 'user_image.jpg', bio: 'Teacher from USA.')
-fourth_user = User.create(name: 'Anna', photo: 'user_image.jpg', bio: 'Teacher from Germany.')
-fifth_user = User.create(name: 'Peter', photo: 'user_image.jpg', bio: 'Teacher from France.')
+first_user = User.create(name: 'Tom', photo: 'user_image.webp', bio: 'Teacher from Mexico.')
+second_user = User.create(name: 'Lilly', photo: 'user_image2.webp', bio: 'Teacher from Poland.')
+third_user = User.create(name: 'John', photo: 'user_image.webp', bio: 'Teacher from USA.')
+fourth_user = User.create(name: 'Anna', photo: 'user_image3.webp', bio: 'Teacher from Germany.')
+fifth_user = User.create(name: 'Peter', photo: 'user_image.webp', bio: 'Teacher from France.')
 
 # Create posts
 first_post = Post.create(author_id: first_user.id, title: 'Hello', text: 'This is my first post')

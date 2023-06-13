@@ -5,6 +5,12 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
+    @user = User.find(params[:user_id])
+
+    begin
+      @post = Post.where(author_id: @user.id).find(params[:id])
+    rescue => exception
+      @post = nil
+    end
   end
 end
