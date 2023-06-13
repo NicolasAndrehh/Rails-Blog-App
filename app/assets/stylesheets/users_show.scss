@@ -8,8 +8,16 @@
   padding: 1rem;
 }
 
-.user-container {
+.user-show {
   width: 90% !important;
+}
+
+.no-posts {
+  margin-top: 2rem;
+
+  h2 {
+    font-size: 2rem;
+  }
 }
 
 .user-posts {
