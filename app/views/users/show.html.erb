@@ -28,5 +28,9 @@
             </div>
         <% end %>
     </div>
+
+    <%= link_to user_posts_path(@user.id), class: 'all-posts-button' do %>
+        <p>See all posts</p>
+    <% end %>
 </section>
 

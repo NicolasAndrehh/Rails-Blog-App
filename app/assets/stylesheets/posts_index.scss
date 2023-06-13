@@ -1,5 +1,16 @@
 .post-container {
   border-radius: 0.5rem 0.5rem 0 0 !important;
+
+  .title-and-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    .view-post {
+      text-decoration: none;
+    }
+  }
 }
 
 .comments-container {
@@ -8,7 +19,7 @@
   align-items: center;
   background-color: #ddd;
   box-shadow: 0 0 5px 1px #b8b8b8;
-  width: 90%;
+  width: 100%;
   padding: 1rem;
   border-radius: 0 0 0.25rem 0.25rem;
 
