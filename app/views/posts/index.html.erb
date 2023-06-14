@@ -28,7 +28,9 @@
                         |
                         <%= link_to 'Add comment', new_user_post_comment_path(@user.id, post.id), class: 'interactive-links' %>
                         |
-                        <%= link_to 'Like', user_post_likes_path(@user.id, post.id), class: 'interactive-links' %>
+                        <%= form_with url: user_post_likes_path(@user.id, post.id) do |form| %>
+                            <a><%= form.submit 'Like', class: 'like-button' %></a>
+                        <% end %>
                     </div>
                 </div>
                 <p><%= post.text %></p>
