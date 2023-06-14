@@ -50,10 +50,13 @@
   }
 }
 
-.all-posts-button {
+.all-posts-button,
+.create-post {
   margin-top: 1rem;
   padding: 1rem;
   border-radius: 0.25rem;
+  width: 90%;
+  text-align: center;
   text-decoration: none;
   background-color: #000;
   border: 1px solid #000;
