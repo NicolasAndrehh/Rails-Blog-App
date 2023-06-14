@@ -7,9 +7,16 @@
     align-items: center;
     width: 100%;
 
-    .view-post {
-      text-decoration: none;
+    .user-interactions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 1rem;
+
+      .interactive-links {
+        text-decoration: none;
+      }
     }
+
   }
 }
 
