@@ -11,7 +11,7 @@ RSpec.describe 'User integration tests', type: :feature do
     describe 'index' do
         before { visit users_path }
 
-        it 'display the username of all other users' do
+        it 'should display the username of all other users' do
             @users.each do |user|
                 expect(page).to have_content(user.name)
             end
