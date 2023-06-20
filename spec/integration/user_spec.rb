@@ -47,7 +47,8 @@ RSpec.describe 'User integration tests', type: :feature do
       @second_post = Post.create(author_id: @user1.id, title: 'Hello', text: 'This is my second post')
       @third_post = Post.create(author_id: @user1.id, title: 'Hello', text: 'This is my third post')
       @fourth_post = Post.create(author_id: @user1.id, title: 'Hello', text: 'This is my fourth post')
-
+      @posts = [@second_post, @third_post, @fourth_post]
+      
       visit user_path(@user1)
     end
 
@@ -69,6 +70,28 @@ RSpec.describe 'User integration tests', type: :feature do
     end
 
     it 'should display the last 3 posts' do
+      expect(page).to have_content(@second_post.text)
+      expect(page).to have_content(@third_post.text)
+      expect(page).to have_content(@fourth_post.text)
+    end
+
+    it 'should display a button to see all posts' do
+      expect(page).to have_content('See all posts')
+    end
+
+    it 'should redirect to the post page when clicking on the view post link' do
+      @posts.each do |post|
+        post_link = find("a[href='#{user_post_path(@user1.id, post.id)}']")
+        post_link.click
+        expect(page).to have_current_path(user_post_path(@user1, post))
+
+        visit user_path(@user1)
+      end
+    end
+
+    it 'should redirect to the posts index page when clicking on the see all posts button' do
+      click_link('See all posts')
+      expect(page).to have_content(@first_post.text)
       expect(page).to have_content(@second_post.text)
       expect(page).to have_content(@third_post.text)
       expect(page).to have_content(@fourth_post.text)

@@ -71,7 +71,7 @@ RSpec.describe 'User integration tests', type: :feature do
       expect(page).to have_selector('.pagination')
     end
 
-    it 'should redirect to the post page when clicking on the post title' do
+    it 'should redirect to the post page when clicking on the view post link' do
       @posts.each do |post|
         post_link = find("a[href='#{user_post_path(@user.id, post.id)}']")
         post_link.click
