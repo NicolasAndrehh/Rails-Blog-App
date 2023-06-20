@@ -19,8 +19,19 @@
             <h2>Posts</h2>
             <% @user.recent_posts.each do |post| %>
                 <div class='post-container'>
+                    <div class='title-and-link'>
                     <h3><%= post.title %></h3>
-                    <p><%= post.text %></p>
+                    <div class='user-interactions'>
+                        <%= link_to 'View post', user_post_path(@user.id, post.id), class: 'interactive-links' %>
+                        |
+                        <%= link_to 'Add comment', new_user_post_comment_path(@user.id, post.id), class: 'interactive-links' %>
+                        |
+                        <%= form_with url: user_post_likes_path(@user.id, post.id) do |form| %>
+                            <a><%= form.submit 'Like', class: 'like-button' %></a>
+                        <% end %>
+                    </div>
+                </div>
+                <p><%= post.text %></p>
                     <div class='post-interactions'>
                         <p>Comments: <%= post.comments_counter %></p>
                         |
