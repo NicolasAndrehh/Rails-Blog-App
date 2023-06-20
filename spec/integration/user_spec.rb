@@ -48,7 +48,7 @@ RSpec.describe 'User integration tests', type: :feature do
       @third_post = Post.create(author_id: @user1.id, title: 'Hello', text: 'This is my third post')
       @fourth_post = Post.create(author_id: @user1.id, title: 'Hello', text: 'This is my fourth post')
       @posts = [@second_post, @third_post, @fourth_post]
-      
+
       visit user_path(@user1)
     end
 
