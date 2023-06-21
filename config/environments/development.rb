@@ -37,17 +37,17 @@ Rails.application.configure do
   config.active_storage.service = :local
 
   # Don't care if the mailer can't send.
-  config.action_mailer.delivery_method = :sendmail
+  # config.action_mailer.delivery_method = :sendmail
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.default_options = {from: 'nicolasolaya22@gmail.com'}
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-  address:              'smtp.gmail.com',
+  address:              'smtp.sendgrid.net',
   port:                 587,
-  domain:               'gmail.com',
-  user_name:            Rails.application.credentials.gmail[:email],
-  password:            Rails.application.credentials.gmail[:password],
+  domain:               'smtp.sendgrid.net',
+  user_name:            Rails.application.credentials.sendgrid[:username],
+  password:            Rails.application.credentials.sendgrid[:password],
   authentication:       'plain',
   enable_starttls_auto: true  }
   config.action_mailer.default_url_options = {:host =>'localhost:3000'}
