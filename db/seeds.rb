@@ -2,7 +2,8 @@
 first_user = User.create(name: 'Tom', photo: 'user_image.webp', bio: 'Teacher from Mexico.', email: 'tom@gmail.com', password: '123456', password_confirmation: '123456')
 second_user = User.create(name: 'Lilly', photo: 'user_image2.webp', bio: 'Student from Mexico.', email: 'lilly@gmail.com', password: '123456', password_confirmation: '123456')
 third_user = User.create(name: 'John', photo: 'user_image.webp', bio: 'Student from Mexico.', email: 'john@gmail.com', password: '123456', password_confirmation: '123456')
-fourth_user = User.create(name: 'Anna', photo: 'user_image3.webp', bio: 'Student from Mexico.', email: 'anna@gmail.com', password: '123456', password_confirmation: '123456')
+fourth_user = User.create(name: 'Anna', photo: 'user_image2.webp', bio: 'Student from Mexico.', email: 'anna@gmail.com', password: '123456', password_confirmation: '123456')
+admin = User.create!(name: 'Admin', photo: 'user_image3.webp', bio: 'Admin', email: 'admin@gmail.com', password: '123456', password_confirmation: '123456', role: 'admin', confirmed_at: Time.current)
 
 # Create posts
 first_post = Post.create(author_id: first_user.id, title: 'Hello', text: 'This is my first post')
