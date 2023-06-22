@@ -12,10 +12,6 @@
       justify-content: flex-end;
       gap: 1rem;
 
-      .interactive-links {
-        text-decoration: none;
-      }
-
       .like-button {
         font-size: 1rem;
         padding: 0;
@@ -40,8 +36,13 @@
 
   .comment-container {
     display: flex;
+    justify-content: space-between;
     width: 100%;
-    gap: 0.5rem;
-    margin-bottom: 0.25rem;
+
+    .comment {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 0.25rem;
+    }
   }
 }

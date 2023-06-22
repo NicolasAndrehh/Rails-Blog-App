@@ -124,6 +124,12 @@ To run tests, run the following command:
 - Twitter: [@nicolasolaya22](https://twitter.com/nicolasolaya22)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/nicolas-olaya/)
 
+👤 **Wali Muhammad**
+
+* GitHub: [@Itswali](https://github.com/Itswali)
+* Twitter: [@Wali-Muhammad](https://twitter.com/WaliMuh94818599)
+* LinkedIn: [@wali-Muhammad](https://linkedin.com/in/wali-muhammad-666040244/)
+
 <p align="right"><a href="#readme-top">Back to top</a></p>
 
 ## 🔭 Future Features <a name="future-features"></a>
