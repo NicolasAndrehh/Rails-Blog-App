@@ -6,6 +6,6 @@ class LikesController < ApplicationController
     else
       flash[:alert] = 'Sorry, something went wrong!'
     end
-    redirect_to user_posts_path(params[:user_id])
+    redirect_to user_post_path(params[:user_id], params[:post_id])
   end
 end

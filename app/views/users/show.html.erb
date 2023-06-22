@@ -16,6 +16,10 @@
         <p><%= @user.bio %></p>
     </div>
 
+    <% if @user.id == current_user.id %>
+        <%= link_to 'Create new post', new_user_post_path(@user.id), class: 'create-post' %>
+    <% end %>
+
     <% if @user.recent_posts.any? %>
         <div class='user-posts'>
             <h2>Posts</h2>
@@ -31,6 +35,11 @@
                             <%= form_with url: user_post_likes_path(@user.id, post.id) do |form| %>
                                 <a><%= form.submit 'Like', class: 'like-button' %></a>
                             <% end %>
+                            <% if can? :destroy, post || @user.id == current_user.id %>
+                                |
+                                <%= button_to 'Delete post', user_post_path(@user.id, post.id), method: :delete, class: 'interactive-links'%>
+                            <% end %>                                
+                            
                         </div>
                     </div>
                     <p><%= post.text %></p>
