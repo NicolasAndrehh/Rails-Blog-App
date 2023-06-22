@@ -17,7 +17,11 @@ class CommentsController < ApplicationController
 
   def destroy
     @user = User.find(current_user.id)
-    @comment = Comment.where(author_id: @user.id).find(params[:id])
+    if @user.is? :admin
+      @comment = Comment.find(params[:id])
+    else
+      @comment = Comment.where(author_id: @user.id).find(params[:id])
+    end
 
     if @comment.destroy
       flash[:notice] = 'Your comment was deleted successfully'
