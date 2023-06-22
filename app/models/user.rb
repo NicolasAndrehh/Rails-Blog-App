@@ -14,6 +14,6 @@ class User < ApplicationRecord
   end
 
   def is?(requested_role)
-    self.role == requested_role.to_s
+    role == requested_role.to_s
   end
 end
